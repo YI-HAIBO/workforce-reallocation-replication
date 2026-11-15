@@ -1,0 +1,9 @@
+Please download the following datasets and place them in this folder:
+
+1. IFR Robot Density (Excel) -> ifr_rodensity.xlsx
+2. OECD Employment Protection (Excel) -> oecd_epl.xlsx
+3. OECD Wage Replacement (Excel) -> oecd_woreplacement.xlsx
+4. ILO Codetermination (CSV) -> ilo_codetermination.csv
+5. World Bank Unemployment (Excel) -> wb_unemployment.xlsx
+
+If any file is missing, the script will generate a placeholder for supplement.
