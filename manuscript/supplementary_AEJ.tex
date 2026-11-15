@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{setspace}
+\doublespacing
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\begin{document}
+\begin{center}
+{\Large\bfseries Supplementary Material}\\
+\vspace{4pt}
+{\large Directional Evidence on Workforce Reallocation in China's Manufacturing Digital Transformation}
+\end{center}
+
+\section*{S1. Proofs of Lemmas 1--3 and Propositions 1--4}
+\begin{proof}
+The frontier is $\theta(A)=\min\bigl\{\alpha_s,\;\kappa_s^{-1}\bigl(r(A)/w\bigr)\bigr\}$. Since $\kappa_s$ is decreasing and convex, $\kappa_s^{-1}$ is decreasing and convex; since $r$ is decreasing and convex in $A$, $r(A)/w$ is decreasing and convex in $A$. The composition of a decreasing-convex map with a decreasing-convex map is increasing, and concavity follows from the convexity of both maps, giving $\theta'>0$ and $\theta''<0$ on the interior. The limits follow from $\lim_{A\to\infty}r(A)=0$, so $\kappa_s^{-1}(0)=\infty$ and $\theta(A)\to\alpha_s$; normalising the routine share to unit measure yields $\lim_{A\to\infty}\theta(A)=1$.
+\end{proof}
+\begin{proof}
+The retraining condition $w\,p(I_s)\ge w_r+c(I_s)$ defines a threshold over the worker-type distribution; differentiating the resulting share with respect to $I_s$ and applying the envelope theorem with $p'>0$ and $c'<0$ gives $\rho'>0$. Concavity follows from the diminishing returns of the success probability and the convexity of the cost-reduction schedule, standard under a log-concave type distribution; $\rho(0)=0$ because $c(0)$ is prohibitive, and $\rho'(0)>0$ because a small subsidy moves a positive measure of marginal types into retraining.
+\end{proof}
+\begin{proof}
+The productivity gain from automating measure $\theta(A_s)\alpha_s$ of tasks raises the sector's effective TFP. By the CES demand system, derived demand for the surviving non-routine tasks rises with TFP at elasticity $\varepsilon>1$; writing the labour-demand elasticity per unit of automated task share as $\nu_s$ yields~the scale-effect equation of the main text. Then $\partial\sigma_s/\partial A_s=\nu_s\alpha_s L_s\,\theta'(A_s)>0$ by Lemma~Lemma~1 of the main text.
+\end{proof}
+\begin{proof}
+By~the net-change equation of the main text, the sign of $\Delta L_s$ equals the sign of $\nu_s+\rho(I_s)-1$, which is independent of $A_s$ under A1--A3; the sector with capacity above the threshold expands and the one below contracts. When $\nu_M+\rho(I_M)>1>\nu_C+\rho(I_C)$, the two terms of the difference have opposite signs and $\Delta L_M-\Delta L_C>0$, with $\Delta L_M>0$ and $\Delta L_C<0$.
+\end{proof}
+\begin{proof}
+From the decomposition $\Delta N_M=s_{M,0}\Delta N+N_1\Delta s_M$, dividing by $\Delta N_M$ gives $\gamma_M=1-s_{M,0}\Delta N/\Delta N_M$; substituting $\Delta N_M=\Delta L_M$ from~the net-change equation of the main text yields~the composition-ratio equation of the main text, and $\gamma_M>\tfrac12$ rearranges to $\Delta L_M>2\,s_{M,0}\Delta N$.
+\end{proof}
+\begin{proof}
+Differentiating~the cost equation of the main text, A1 gives $\theta'>0$ and A2 gives $\rho'>0$, so $\partial C/\partial A>0$ and the cross-partial is negative.
+\end{proof}
+\begin{proof}
+From~the composition-ratio equation of the main text, $\partial\gamma_M/\partial\Delta L_M=s_{M,0}\Delta N/\Delta L_M^2>0$. By~the net-change equation of the main text, $\partial\Delta L_M/\partial I_M=\theta(A_M)\alpha_M L_M\,\rho'(I_M)>0$ (A2) and $\partial\Delta L_M/\partial\nu_M=\theta(A_M)\alpha_M L_M>0$ (A3); the chain rule gives the two inequalities. Finally $\partial\Delta L_M/\partial A_M=\theta'(A_M)\alpha_M L_M[\nu_M+\rho(I_M)-1]$ has the sign of $\nu_M+\rho(I_M)-1$ (A1).
+\end{proof}
+\section*{S2. Full Identification Design: Endogeneity and the 101-City Design}
+
+The design specifies the identification strategy for when city-level migrant-worker composition becomes available. A critical identification concern remains: observed manufacturing inflows could reflect either \emph{expansion-driven} reallocation, where growing manufacturing absorbs workers endogenously, or \emph{contraction-driven} reallocation, where construction contraction pushes workers elsewhere regardless of their own dynamics. The two mechanisms imply opposite policy prescriptions. As a first cut we compare two contrasting regimes: Zhejiang, where manufacturing value added expanded at above 8 per cent annual average while construction remained broadly stable, and the three Northeastern provinces together with Shanxi, where manufacturing contracted at approximately $-2$ per cent and construction at approximately $-8$ per cent per year. An event-study model around the August 2023 onset of the first pilot batch is specified with event-time dummies relative to 2023 and province controls for income, urbanisation, industrial structure, higher-education enrolment and robot density. At province level the National Bureau of Statistics does not publish migrant-worker composition, so falsifiable criteria are stated rather than coefficients: under expansion-driven reallocation the Zhejiang-group coefficients are positive and rising while the Northeast group is close to zero, whereas under contraction-driven reallocation the two groups differ little.
+
+The MIIT three-batch pilot (30 cities announced 30 August 2023, 36 on 21 June 2024 and 35 on 30 May 2025) offers a sharper identification opportunity: within a single policy wave, the staggered rollout provides multiple shock timings against which a common-trend assumption can be tested. The identification model is
+\[
+Y_{c,t} = \alpha + \sum_{b=1}^{3} \beta_b TREAT_{c,b} \times POST_{b,t} + \gamma X_{c,t} + \mu_c + \lambda_t + \varepsilon_{c,t},
+\]
+where $Y_{c,t}$ is the city-level outcome of interest, $TREAT_{c,b}=1$ if city $c$ belongs to batch $b$ and $POST_{b,t}=1$ at or after the batch rollout year, with standard errors clustered by city. Three extensions are specified ahead of estimation: the primary estimand is the Callaway and Sant'Anna doubly-robust group-time average treatment effect, aggregated with group-size weights; heterogeneity-robust event-study coefficients follow Abraham and Sun (2021) so early-treated cities are not used as controls for late-treated ones; and the pre-trend assumption is tested jointly as $H_0:\beta_{-4}=\beta_{-3}=\beta_{-2}=\beta_{-1}=0$, complemented by a placebo that re-assigns batch weights to fictitious rollout dates drawn uniformly from 2017--2019. Because three outcomes are tested simultaneously, the false discovery rate is controlled with the Benjamini--Hochberg (1995) procedure at $q=0.10$. Two diagnostics address batch assignment: batch membership is regressed on pre-period income, industrial structure, urbanisation and enrolment to expose endogeneity, and the anticipation term $POST_{-1} \times TREAT_{c,b}$ is allowed for because the subsidy caps and the 80 per cent use rule were public before rollout.
+
+The design is declared complete when at least 70 per cent of the 101 cities have outcome data for 2019--2025, the pre-trend test is reported for each batch separately, the three estimands are reported side by side, and the batch-endogeneity and anticipation diagnostics are reported regardless of sign. The 101-city list is used as a coverage and fiscal record; the design specifies the conditions under which it could serve as a basis for control-group construction: the National Bureau of Statistics releases survey reports at national level only, city-level robot density is only partially reported and must be interpolated, and controls such as per-capita GDP and education expenditure must be assembled from city yearbooks. The staggered design relaxes the parallel-trend failure documented in the provincial panel by exploiting multiple treatment timings within a single policy wave, but validity still depends on local pre-trend comparability and batch 1 coincides with the real-estate cycle, so the pre-trend placebo and anticipation test are part of primary reporting rather than optional robustness. Aggregate prefecture-level employment is available, so the binding gap for a causal reading of this paper's outcome is specifically the migrant-worker industry composition, not city-level employment per se.
+
+\section*{S3. Data and reproduction note}
+
+The reproduction files for the international panel (the institutional index components and the automation series) are provided for transparency but should be treated as illustrative. The IFR industrial-robot series is from the licensed (VDMA) database and is not freely reproducible. The local reproduction files were generated with placeholder series where a public source was not available and should not be used to re-estimate the index; the headline IACI values and the panel estimates of the main text are reported as given, not as a re-derivation from these files. Code and data for the Chinese domestic tables (Sections 3--4) are reproducible from the cited public sources.
+
+\section*{References}
+\begin{list}{}{\leftmargin=1.5em}
+\item Abraham, S. and L. Sun, 2021, Estimating dynamic treatment effects in event studies with heterogeneous treatment effects. \emph{Journal of Econometrics}, 225, pp. 175--99.
+\item Benjamini, Y. and Y. Hochberg, 1995, Controlling the false discovery rate: A practical and powerful approach to multiple testing. \emph{Journal of the Royal Statistical Society: Series B}, 57, pp. 289--300.
+\item Callaway, B. and P. H. Sant'Anna, 2021, Difference-in-differences with multiple time periods. \emph{Journal of Econometrics}, 225, pp. 200--30.
+\end{list}
+
+\end{document}
