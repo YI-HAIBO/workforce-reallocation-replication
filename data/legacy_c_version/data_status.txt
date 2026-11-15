@@ -1,0 +1,5 @@
+L2 Data Acquisition Completed
+==================================================
+Countries: 19
+Years: 35
+Columns: ['country', 'year', 'ROB', 'EPL', 'WREPL', 'COD', 'UNEMP']
