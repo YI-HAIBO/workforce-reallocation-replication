@@ -1,0 +1,12 @@
+﻿country,code,density_2023,density_2024,source
+Germany,DEU,429.0,449.0,OWID(IFR)/10
+France,FRA,186.0,195.0,OWID(IFR)/10
+Sweden,SWE,347.0,377.0,OWID(IFR)/10
+Italy,ITA,228.0,237.0,OWID(IFR)/10
+Rep. Korea,KOR,1012.0,1220.0,OWID(IFR)/10
+Spain,ESP,174.0,183.0,OWID(IFR)/10
+Japan,JPN,419.0,446.0,OWID(IFR)/10
+China,CHN,142.0,166.0,OWID(IFR)/10
+Brazil,BRA,,,unavailable
+Mexico,MEX,,62,IFR 2025 press release
+United States,USA,295.0,307.0,OWID(IFR)/10
