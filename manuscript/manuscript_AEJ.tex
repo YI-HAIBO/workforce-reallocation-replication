@@ -1,0 +1,551 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\usepackage{setspace}
+\doublespacing
+\captionsetup[table]{labelsep=period,justification=raggedright,singlelinecheck=false,font=small,labelfont={bf}}
+\captionsetup[figure]{labelsep=period,justification=raggedright,singlelinecheck=false,font=small,labelfont={bf}}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\setlength{\emergencystretch}{2em}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Directional Evidence on Workforce Reallocation in China's Manufacturing Digital Transformation: Migrant Workers and Regional Diagnosis}
+\end{center}
+
+\begin{abstract}
+This paper asks whether automation in China's manufacturing digital transformation replaces jobs or workers. Using migrant-worker survey data (2021--2025), the three-batch 101-city SME digitalisation pilot and an eleven-country panel, it finds that manufacturing's migrant-worker share rose 1.1 percentage points while construction fell 5.2, that the manufacturing gain of 5.66 million workers is reallocation-led ($\gamma=0.586$), and that within-sector skill upgrade accounts for 84 per cent of the quality-adjusted gain. The transition is a reallocation-led skill upgrade, not displacement. Its cost is governed by institutional adjustment capacity (interaction $0.054$, $p=0.0002$), not robot intensity; the binding constraint is training supply, not worker willingness.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Manufacturing digital transformation; migrant worker employment; institutional adjustment capacity; structural change; transition economics; China.
+
+\noindent\textbf{JEL classification:} J24; J26; J45; J61; J68; O15; O33.
+
+\section{Introduction}
+
+China's manufacturing digital transformation is central to the country's national economic strategy, yet its workforce consequences have received uneven analytical attention. This paper investigates how the transition is reshaping the composition, income and skill structure of China's migrant-worker pool. The evidence is organised as a set of stylized facts on structural reallocation, assembled from independent data sources that converge on a single reading. The setting is distinctive. China accounts for roughly 40 per cent of global manufacturing value added, and manufacturing is the largest single industry in a migrant-worker pool of approximately 301 million, absorbing about 28 per cent. Digitalisation plans at national, provincial and municipal level have produced the largest staggered rollout of SME digital-transformation policy in any economy. What remains under-characterised is the transition side: how existing worker pools, particularly migrant workers in construction and low-skill manufacturing, are redistributed in response to demand-side restructuring.
+
+Our approach is closely related to Chen and Han (2026), which estimates the effect of intelligent manufacturing policy on prefecture-level regional employment using difference-in-differences, instrumental-variable and propensity-score-matching estimators on a 2010--2023 Chinese city panel. Three objects differ: the outcome is the composition and skill structure of migrant workers rather than aggregate employment; the moderator is institutional adjustment capacity, not financial innovation; and the setting is a staggered policy rollout requiring the group-time average-treatment-effect framework of Section 5.3. The study is therefore a partial precedent on policy design but not on any of the three objects this paper isolates.
+
+Our closest antecedent is the contemporaneous evidence on automation and labour markets within China itself. Zhang and Feng (2026), in \emph{Review of Development Economics}, construct a shift-share measure of automation exposure. Using household survey data for 2012--2018 with fixed effects and instrumental variables, they find that higher automation exposure is associated with lower local employment rates, with displacement concentrated among men and in productive employment; stronger labour-union protection mitigates the adverse effect on workers. Three objects separate the present analysis from that study. The data differ in period and scope: household survey data for 2012--2018 against the migrant-worker survey series for 2021--2025, a pool of roughly 301 million workers rather than the resident population. The outcome differs: aggregate local employment rates against the industry composition and skill structure of migrant workers. The moderator differs: labour-union protection, a single institutional dimension, against a four-component index of institutional adjustment capacity also carrying wage replacement, training coverage and codetermination, applied across eleven economies rather than within one. On that account the union-strength finding is a component of, rather than a substitute for, the moderator tested here.
+
+We draw on high-quality administrative and survey data: NBS \emph{Survey Reports on Migrant Workers} (2021--2025), Ministry of Finance and MIIT pilot notices, primary cases from four manufacturing regions, and an international coordinate frame (IFR World Robotics, OECD Employment Protection Statistics, ILO codetermination rankings, World Bank indicators) for eleven countries (2000--2024). Firm-level and city-level migrant-worker outcome data are not publicly available, so the analysis is directional rather than causal. Aggregate prefecture-level employment is available (Chen and Han, 2026, use a 2010--2023 city panel), but the migrant-worker industry composition that this paper's outcome requires is not released at city level. The contribution is a single, coherent framework. A micro-founded two-sector task model derives the direction, composition and institutional moderation of the transition as four propositions, with a generalised direction index that nests the quantity and quality decompositions and maps the structural parameters to the reallocation threshold (Section~2.2--2.3). A reallocation accounting framework decomposes the manufacturing gain into pool growth, cross-sector composition and within-sector skill upgrade, with an explicit no-reallocation counterfactual (Section~3.1). Stylized facts identify the binding constraints. Institutional adjustment capacity is the boundary condition under which higher automation is associated with smoother adjustment, tested on an eleven-country panel, with primary cases from four manufacturing regions diagnosing the frictions any policy tool must address. A feasible identification design for when city-level migrant-worker composition becomes available is in Section~5.3.
+
+The study draws on three literatures developed largely in parallel. The task-based framework predicts that automation substitutes routine tasks while raising premia on residual work, with mid-skill compression in advanced economies (Acemoglu et al., 2016; Autor et al., 2003). The robot-employment literature reports a negative association between robot adoption and low-skill employment in exposed industries, with reinstatement generating offsetting jobs (Acemoglu and Restrepo, 2019; Fagiola et al., 2022; Graetz and Michaels, 2018). In China, Wang, Li and Xu (2025), in this journal, show that firm-level robot adoption raises the relative share of female employees, using robot imports as the exposure measure. The China shock literature established that trade-driven reallocation concentrates labour-market damage in specific localities (Autor et al., 2013; Dauth et al., 2014), and the Chinese migrant-worker literature documents the pool's scale, structure and mobility frictions (Du, 2013; Lu and Ren, 2017). No single strand combines these findings to predict how an economy at China's scale redistributes workers under automation. Section 2 reports the data and methods and develops the model; Section 3 reports directional evidence and the reallocation accounting framework; Section 4 diagnoses transition-side problems; Section 5 develops the international comparison and outlines a feasible identification design; Section 6 concludes.
+
+\section{Data and Methods}
+
+\subsection{Data}
+
+Four sources, combined at different aggregation levels. \emph{First}, the National Bureau of Statistics' annual \emph{Survey Reports on Migrant Workers} (2021--2025) provide the primary aggregate series: migrant workers by industry, monthly wages by industry, education composition and the total pool. \emph{Second}, the three-batch SME digital transformation city pilot announced by the Ministry of Finance and MIIT (2023--2025) provides the coverage structure of 101 cities across 26 provinces and the Xinjiang Production and Construction Corps. \emph{Third}, primary cases from four manufacturing regions (Pearl River Delta, Yangtze River Delta, Northeast, central China) documented between 2024 and 2026 provide mechanism evidence. \emph{Fourth}, international comparison data comprise IFR industrial-robot density, OECD Employment Protection Legislation scores and productivity statistics, ILO ILC codetermination rankings and World Bank unemployment rates for eleven countries, 2000--2024 (World Bank, 2026). The three batches have unequal windows, and migrant-worker industry composition is released only at national level: the evidence parameterises the shape and speed of the transition and identifies the barriers any policy tool must address.
+
+\subsection{A model of reallocation direction}
+
+This section derives the answer to the paper's question from a micro-founded two-sector task model, so that the propositions are testable predictions of a common theoretical framework rather than independent assertions, and so that the cross-country panel of Section~5 can be read as a direct test of the model's central mechanism. The model delivers four propositions that form a single chain rather than a set of independent claims: the direction of reallocation is governed by the relative combined reinstatement-and-scale effect; the composition ratio above one-half is the signature of reallocation-dominated adjustment; institutional adjustment capacity attenuates the labour-market cost of automation; and the composition ratio responds positively to institutional capacity. Relative to the reduced-form specification of an earlier draft, the model endogenises the three primitives -- the automation frontier, the retraining technology and the scale effect -- and delivers a factorisation result that separates the \emph{direction} of reallocation from its \emph{magnitude}.
+
+\paragraph{Setup.} Two sectors, manufacturing ($M$) and construction ($C$). Each sector produces output $Y_s$ from a continuum of tasks $x\in[0,1]$ aggregated by a CES technology with elasticity of substitution $\varepsilon>1$,
+\begin{equation}
+Y_s \;=\; \left[\int_0^1 y_s(x)^{\frac{\varepsilon-1}{\varepsilon}}\,dx\right]^{\frac{\varepsilon}{\varepsilon-1}},
+\label{eq:ces}
+\end{equation}
+where tasks are ordered by routineness: $x\in[0,\alpha_s]$ are \emph{routine} tasks, programmable and therefore automatable, with routine share $\alpha_s\in(0,1)$, while $x\in(\alpha_s,1]$ are \emph{non-routine} tasks requiring human skill. Let $L_s$ denote the mass of workers in sector $s$ and $N=\sum_s L_s$ the total migrant pool.
+
+\paragraph{Automation frontier (Lemma 1).} A routine task $x$ can be produced by either capital or labour. Capital productivity on task $x$ is $\kappa_s(x)$, strictly decreasing and convex in $x$ (routine tasks are the most capital-intensive), and labour productivity is normalised to one. With capital rental $r$ and wage $w$, task $x$ is automated if and only if the capital cost per unit of task output does not exceed the labour cost,
+\begin{equation}
+\frac{r}{\kappa_s(x)} \;\le\; w .
+\label{eq:autocond}
+\end{equation}
+Robot density $A_s=K_s/L_s$ enters through the rental rate: more robots per worker lower $r$ and hence raise the right-hand side of~\eqref{eq:autocond}, expanding the set of automated tasks. Because $\kappa_s$ is decreasing, condition~\eqref{eq:autocond} holds for a connected set of routine tasks $x\le\bar\theta_s(r/w)$. Let $\theta(A_s)$ denote the measure of automated routine tasks.
+
+\begin{lemma}\label{lem:theta}
+Under the cost ordering~\eqref{eq:autocond} with decreasing convex $\kappa_s$ and a rental rate $r(A)$ that is decreasing and convex in robot density, the automation frontier $\theta(A)$ is strictly increasing and concave in $A$, with $\theta(0)=0$ and $\lim_{A\to\infty}\theta(A)=1$.
+\end{lemma}
+
+
+\paragraph{Retraining technology (Lemma 2).} Displaced routine workers are not absorbed automatically. They can be retrained into the non-routine tasks that automation simultaneously makes more valuable -- the reinstatement effect of Acemoglu and Restrepo (2019) -- but retraining requires \emph{institutional adjustment capacity} $I_s\in[0,\bar I]$: the availability of training, wage replacement during retraining and workplace co-determination. A displaced worker retrains if the expected gain from non-routine employment, $w\,p(I_s)$ with success probability $p(I_s)$, exceeds the opportunity cost of foregone routine earnings plus the training cost $c(I_s)$, where $c'(I_s)<0$ (institutions subsidise retraining). With heterogeneous workers, the aggregate share retraining successfully is $\rho(I_s)$.
+
+\begin{lemma}\label{lem:rho}
+If the success probability $p(I)$ is increasing and the training cost $c(I)$ decreasing, then the aggregate retraining success rate $\rho(I)$ is strictly increasing and concave in $I$, with $\rho(0)=0$ and $\rho'(0)>0$.
+\end{lemma}
+
+
+\paragraph{Scale effect (Lemma 3).} Automation raises total factor productivity. With $\varepsilon>1$, the tasks automated by a marginal robot are complements to the surviving non-routine tasks, so the productivity gain raises labour demand for the non-routine segment. The scale effect is proportional to the automated task share,
+\begin{equation}
+\sigma_s \;=\; \nu_s\,\theta(A_s)\,\alpha_s\,L_s,
+\label{eq:scale}
+\end{equation}
+where $\nu_s>0$ is the \emph{scale elasticity of labour demand}: the labour-demand response to the productivity gain from automating measure $\theta(A_s)\alpha_s$ of tasks.
+
+\begin{lemma}\label{lem:sigma}
+Under CES aggregation with $\varepsilon>1$, the scale effect obeys~\eqref{eq:scale} with $\nu_s>0$, and is increasing in $A_s$.
+\end{lemma}
+
+
+\paragraph{Net sectoral change.} Displacement is $D_s=\theta(A_s)\alpha_s L_s$; reinstatement is $R_s=\rho(I_s)\,D_s$; the scale effect is $\sigma_s$. The net change in sectoral employment is
+\begin{equation}
+\Delta L_s \;=\; -\,D_s + R_s + \sigma_s \;=\; \theta(A_s)\,\alpha_s\,L_s\,\bigl[\nu_s+\rho(I_s)-1\bigr].
+\label{eq:net}
+\end{equation}
+Equation~\eqref{eq:net} is the model's central factorisation: automation intensity $\theta(A_s)$ scales the \emph{magnitude} of the sectoral change, while the sign -- the \emph{direction} -- is governed solely by whether the combined reinstatement-and-scale effect $\nu_s+\rho(I_s)$ exceeds or falls short of the displacement threshold $1$.
+
+\paragraph{Assumptions.} \textbf{A1} (Automation frontier): $\theta(A)$ is continuously differentiable, strictly increasing and concave, with $\theta(0)=0$ and $\lim_{A\to\infty}\theta(A)=1$. \textbf{A2} (Retraining technology): $\rho(I)$ is continuously differentiable, strictly increasing and concave, with $\rho(0)=0$ and $\rho'(0)>0$. \textbf{A3} (Scale-reinstatement elasticity): $\nu_s>0$ for each $s$, the scale effect obeys~\eqref{eq:scale}, and manufacturing's complementary task creation exceeds construction's, $\nu_M>\nu_C$. Lemma~\ref{lem:theta} establishes A1, Lemma~\ref{lem:rho} establishes A2, and A3 is the asymmetry that drives the result: automation in manufacturing creates the operator, inspector and data-analyst roles documented in the Chinese primary cases, while construction automation displaces without an equally large complementary task creation.
+
+\paragraph{Proposition 1 (direction of reallocation).} Under A1--A3, the net flow between sectors is
+\begin{equation}
+\Delta L_M-\Delta L_C \;=\; \theta(A_M)\alpha_M L_M\bigl[\nu_M+\rho(I_M)-1\bigr] \;-\; \theta(A_C)\alpha_C L_C\bigl[\nu_C+\rho(I_C)-1\bigr].
+\end{equation}
+Moreover, $\Delta L_M>0>\Delta L_C$ whenever $\nu_M+\rho(I_M)>1>\nu_C+\rho(I_C)$. \emph{The direction of reallocation is determined by the relative combined reinstatement-and-scale effect across sectors, not by automation intensity per se.}
+
+
+\paragraph{Proposition 2 (composition as the signature of reallocation-dominated adjustment).} Let $\gamma_M=N_1\Delta s_M/\Delta N_M$ be the composition ratio of the decomposition of Section~2.3. Under the model, $\Delta N_M=\Delta L_M$ and
+\begin{equation}
+\gamma_M \;=\; 1-\frac{s_{M,0}\,\Delta N}{\theta(A_M)\alpha_M L_M\bigl[\nu_M+\rho(I_M)-1\bigr]},
+\label{eq:gamma}
+\end{equation}
+so that $\gamma_M>\tfrac12$ if and only if $\Delta L_M>2\,s_{M,0}\,\Delta N$.
+
+Condition $\Delta L_M>2\,s_{M,0}\Delta N$ is the formal counterpart of the empirical finding that the total migrant pool grows slowly: with $s_{M,0}\Delta N=0.271\times8.64=2.34$ million and $\Delta L_M=5.66$ million the condition holds ($5.66>4.68$), so the composition ratio exceeds one-half, as observed ($0.586$).
+
+\paragraph{Proposition 3 (institutional moderation of the automation cost).} The labour-market cost of automation -- the net displacement that is not reinstated -- is
+\begin{equation}
+C(A,I) \;=\; \theta(A)\,\alpha\,L\,\bigl[1-\rho(I)\bigr],
+\label{eq:cost}
+\end{equation}
+and under A1--A2
+\begin{equation}
+\frac{\partial C}{\partial A}=\theta'(A)\alpha L\bigl[1-\rho(I)\bigr]>0,
+\qquad
+\frac{\partial^2 C}{\partial A\,\partial I}=-\theta'(A)\alpha L\,\rho'(I)<0 .
+\end{equation}
+
+The negative cross-partial is the testable implication: \emph{higher institutional adjustment capacity attenuates the marginal labour-market cost of automation.} Because the outcome $Q$ in the panel regression of Section~5.2 is the unemployment rate entered in negated form (higher $Q$ denotes better labour-market quality), attenuation of the cost $C$ maps to a \emph{positive} interaction, $\beta_3>0$; the interaction, not the main effect of automation, is the quantity of interest. Column~4 of Table~6 reports exactly that, $\beta_3=0.054$ ($p=0.0002$).
+
+\paragraph{Proposition 4 (comparative statics of the composition ratio).} Under A1--A3, the composition ratio~\eqref{eq:gamma} is increasing in institutional adjustment capacity and in the scale elasticity of labour demand,
+\begin{equation}
+\frac{\partial\gamma_M}{\partial I_M}>0,\qquad
+\frac{\partial\gamma_M}{\partial\nu_M}>0,
+\end{equation}
+and $\partial\gamma_M/\partial A_M$ has the sign of $\nu_M+\rho(I_M)-1$.
+
+Proposition~4 is the theoretical bridge between the accounting framework of Section~3.1 and the institutional moderator of Section~5.2: a rise in institutional adjustment capacity raises the composition share of the manufacturing gain, so the direction index $\gamma_M$ and the interaction coefficient $\beta_3$ are two empirical manifestations of the same underlying structural quantity, the combined reinstatement-and-scale effect $\nu_s+\rho(I_s)$. In the data the observed composition ratio $0.586$ exceeds one-half, so Proposition~4 predicts that strengthening the training and wage-replacement dimensions of institutional capacity -- the margin on which China's score of 2.07 is weakest -- would push $\gamma_M$ further toward the pure-reallocation benchmark of unity.
+
+The four propositions are verified in sequence. Proposition~1 and Proposition~2 are tested through the decomposition and the sectoral-share dynamics of Section~3.1; Proposition~3 through the cross-country panel of Section~5.2; and Proposition~4 is the link between the two, verified jointly through the sign of the interaction in Table~6; the direction index $\gamma_M$ and the interaction coefficient $\beta_3$ are then read as evidence on the same underlying structural quantity, the combined reinstatement-and-scale effect $\nu_s+\rho(I_s)$.
+
+\subsection{Operationalisation}
+
+The model's four propositions are operationalised as follows. Proposition 1 predicts a compositional transfer from construction into manufacturing (a positive manufacturing share change with a composition ratio above one-half). Proposition 2 predicts that wage compensation lags skill-structure upgrade and that the binding friction is firm-delivered training availability rather than worker willingness. Proposition 3 predicts that institutional adjustment capacity, not automation intensity, modulates the transition cost, assessed at two levels: \emph{consistent} (every declared channel matches in sign) and \emph{partial} (signs match but a magnitude is bounded by an unobserved control). Proposition 4 links the composition ratio of the accounting framework to the institutional moderator of the panel. To test Proposition 1 as a direction rather than a magnitude, the change in the number of migrant workers in industry $i$ between 2021 and 2025 is decomposed as follows. Let $N_{i,t}$ be that number in millions, $s_{i,t}$ the industry's share of all migrant workers and $N_t$ the total; $\Delta N_{i}=N_{i,1}-N_{i,0}$, $\Delta N=N_{1}-N_{0}$ and $\Delta s_{i}=s_{i,1}-s_{i,0}$, with subscripts 0 and 1 denoting 2021 and 2025.
+
+
+
+\section{Directional Evidence}
+
+\subsection{Sectoral Shares, Income and the Decomposition}
+
+The National Bureau of Statistics migrant-worker survey provides the primary aggregate series. The manufacturing share rises from 27.1 per cent in 2021 to 28.2 per cent in 2025, and the absolute number of manufacturing migrant workers rises from 79.26 to 84.92 million out of a total pool growing from 292.51 to 301.15 million. Construction falls by 5.2 percentage points, so the manufacturing-plus-construction core contracts from 46.1 to 42.0 per cent while the tertiary sector expands from 53.9 to 58.0 per cent: a structural upward shift. Income does not decline during the transition. The two wage series differ in scope: the monthly wage is the migrant-worker average across all industries (RMB 4,432 to RMB 5,075, +14.5 per cent), while the manufacturing wage is the manufacturing migrant-worker average only (RMB 4,508 to RMB 5,126, +13.7 per cent). The structural pressure is therefore a skill-structure gap rather than income contraction (Table 1, Figure 1).
+
+
+
+
+
+\begin{equation}
+\Delta N_{i} \;=\; s_{i,0}\,\Delta N \;+\; N_{1}\,\Delta s_{i} \qquad i \in \{\mathrm{mfg},\,\mathrm{constr}\} \label{eq:decomp1}
+\end{equation}
+\begin{equation}
+\gamma_{i} \;=\; \frac{N_{1}\,\Delta s_{i}}{\Delta N_{i}} \label{eq:decomp2}
+\end{equation}
+
+For manufacturing, 0.271 multiplied by 8.64 million gives 2.34 million from total pool growth and 301.15 multiplied by 0.011 gives 3.31 million from the change in composition; the two sum to the observed 5.66 million, so $\gamma_{\mathrm{mfg}}$ equals 0.586 (Figure 3).
+
+
+\paragraph{Reallocation accounting.} The two-term decomposition of equations~\eqref{eq:decomp1}--\eqref{eq:decomp2} isolates the quantity channels but treats the change in the skill composition of the manufacturing workforce as a residual. This subsection extends the decomposition into a full \emph{reallocation accounting framework} with three channels and an explicit counterfactual benchmark.
+
+Let $q_{M,t}$ denote the share of manufacturing migrant workers with a college degree or above. The number of college-educated manufacturing workers is $H_{M,t}=N_{M,t}\,q_{M,t}=N_t\,s_{M,t}\,q_{M,t}$, rising from $79.26\times0.126=9.99$ million in 2021 to $84.92\times0.171=14.52$ million in 2025, an increase of $4.53$ million. A sequential three-way decomposition of this quality-adjusted change is
+\begin{align}
+\Delta H_M &= \underbrace{\Delta N\;s_{M,0}\,q_{M,0}}_{\text{pool growth}}
+           + \underbrace{N_1\,\Delta s_M\;q_{M,0}}_{\text{industry composition}}
+           + \underbrace{N_1\,s_{M,1}\,\Delta q_M}_{\text{within-sector skill upgrade}} \notag\\
+          &= 0.295 + 0.417 + 3.822 \;=\; 4.53\ \text{million}. \label{eq:quality}
+\end{align}
+The within-sector skill upgrade -- the rise in the college-or-above share from 12.6 to 17.1 per cent inside manufacturing -- accounts for 3.82 million, or 84 per cent, of the quality-adjusted increase. The transition is therefore not merely a reallocation of worker counts: of the 5.66 million added to manufacturing employment, 4.53 million arrive with a higher skill tier than the 2021 manufacturing average, while only 1.13 million represent quantity added at the existing skill level.
+
+The framework's counterfactual benchmark identifies what the decomposition attributes to reallocation rather than to pool growth. Holding the 2021 industry shares constant while the total pool grows to its 2025 level would put the manufacturing count at $s_{M,0}\,N_1=0.271\times301.15=81.61$ million. The observed 84.92 million exceeds this no-reallocation benchmark by 3.31 million, which is exactly the composition term of equation~\eqref{eq:decomp1} and 58.6 per cent of the total manufacturing gain. The same benchmark applied to construction yields $s_{C,0}\,N_1=0.190\times301.15=57.22$ million against an observed 41.56 million: construction's decline is 111.7 per cent compositional, because the pool-growth term pushes in the opposite direction. \emph{The reallocation accounting framework therefore attributes the transition to cross-sector composition change and within-sector skill upgrade, with pool growth a small and partially offsetting contributor} -- precisely the Proposition~2 reading that the model delivers.
+
+\paragraph{Model-based counterfactual.} Proposition~4 supplies a policy-relevant reading of the accounting framework: because the composition ratio is increasing in institutional adjustment capacity ($\partial\gamma_M/\partial I_M>0$), the direction index responds to the institutional margin on which China's score is weakest. The mechanism is direct. A rise in institutional capacity raises the reinstatement share $\rho(I_M)$, which raises the manufacturing net gain $\Delta L_M$ and hence the composition ratio $\gamma_M=1-s_{M,0}\Delta N/\Delta L_M$. In the data, each additional million workers recovered through the reinstatement channel raises $\Delta L_M$ from 5.66 to 6.66 million and pushes $\gamma_M$ from 0.586 to 0.649, closing roughly a quarter of the gap to the pure-reallocation benchmark of unity; half a million raises $\gamma_M$ to 0.620. Under the concave retraining technology of Assumption~A2 the response is diminishing, so the first increment of capacity delivers the largest gain. The counterfactual is illustrative rather than identified: the aggregate series do not pin down the displacement base $\theta(A_M)\alpha_M L_M$ separately from the reinstatement and scale elasticities, so the magnitude is not structural. The \emph{direction} of the response, however, is a theorem (Proposition~4), and the order of magnitude -- a few tenths of the composition ratio for a realistic reinstatement increment -- is what a pilot that raises the training and wage-replacement dimensions of institutional capacity would be expected to deliver.
+
+For construction, the composition term alone accounts for 111.7 per cent of the observed decline of 14.02 million, while the growth term pushes in the opposite direction. Table 2 records the coverage structure of the policy that frames this evidence. The Ministry of Finance and MIIT launched the SME digital transformation city pilot in three batches from 2023, cumulatively covering 101 cities across 26 provinces and the Corps; more than 80 per cent of each subsidy must be spent on SME digital transformation and 20 per cent may go to platforms, providers, diagnosis, personnel training and financing.
+
+
+
+Two assessments follow. Mechanism Proposition 1 is \emph{consistent}: the manufacturing-plus-construction core falls 4.1 percentage points while the manufacturing count rises by 5.66 million, indicating compositional transfer from construction rather than total industrial expansion, corroborating the prefecture-level evidence on intelligent manufacturing policy (Chen and Han, 2026). Mechanism Proposition 2 is \emph{partial}: overall income rises 14.5 per cent, yet manufacturing migrant workers at RMB 5,126 remain below construction (RMB 5,880) and transport, warehousing and postal services (RMB 5,795), and the college-or-above share moves only from 12.6 to 17.1 per cent (Figure 6).
+
+
+Digital literacy does raise employment quality through social capital (Liu et al., 2025), and the broader measurement literature on job quality in developing economies confirms that employment growth and the progression of wages and skill structure are separable quantities rather than one another's proxies (Hovhannisyan et al., 2026). Mechanism Proposition 3 yields consistent support: income does not fall across all four regional cases, and the cross-country panel in Section 5 independently corroborates that institutional adjustment capacity, not automation intensity, moderates the transition cost.
+
+\subsection{Alternative Anchors}
+
+IFR's April 2026 revision, reflecting updated National Bureau of Statistics labour-market data, reports global industrial robot density of 132 operational robots per 10,000 manufacturing employees in 2024, with China at 166 units and 22nd worldwide (Table 3). The pre-revision figure of 567 and third rank is superseded. Yet China holds an operational stock of approximately 2.03 million units, roughly 43.5 per cent of the global total, and annual installations of approximately 295,000 units, roughly 54 per cent of the global total: the largest single market for industrial robotics by an order of magnitude (IFR, 2025; IFR, 2026). Scale is what makes the pilot-city coverage data empirically relevant, because the Chinese case is not a small experiment in automation but the largest single test of workforce adjustment under digitalisation; regional disparity within China is a matter of \emph{at what pace and along what institutional channel} rather than \emph{whether} automation arrives. Robot density alone is neither necessary nor sufficient for a smooth transition: the rate of adoption combined with institutional adjustment capacity determines the employment response.
+
+
+
+Two further anchors sharpen the reading. The OECD Compendium of Productivity Indicators reports that aggregate productivity growth in 2023--2024 was driven mainly by within-industry gains rather than compositional shifts, with the largest dispersion of multifactor productivity growth in digital-intensive industries (OECD, 2026a). For an economy whose task mix is dominated by routine manual work, automation concentrates on that routine segment and the surviving residual work commands higher skill premia (Acemoglu and Restrepo, 2018; Autor et al., 2003). The within-industry productivity result is consistent with the directional finding that manufacturing migrant-worker income rises faster in absolute terms than the migrant-worker average while the wage \emph{rank} of manufacturing relative to construction is unchanged: the signature of reinstatement operating inside a rising task-wage gradient (Acemoglu and Restrepo, 2019) rather than wholesale reallocation into the tertiary sector.
+
+The three data sources converge on a coherent picture: China is the largest global market for industrial robots by installed base, its labour-market response is characterised by skill-driven structural upgrade within manufacturing rather than wholesale employment contraction, and its regional heterogeneity reflects differences in institutional adjustment capacity rather than differences in automation scale. The cross-country comparison in Section 5 identifies the institutional mechanisms behind this reading.
+
+\section{Diagnosis and Institutional Channels}
+
+Digital transformation creates substantial employment potential, but in current Chinese manufacturing practice the incomplete realisation of workforce potential and the difficulty of occupational transition are intertwined, forming the central constraint on the returns from transformation.
+
+\subsection{Worker-Side Barriers}
+
+Low-skilled industrial workers, predominantly migrant workers, are the group most directly affected, yet a unidirectional shrinkage assumption must be corrected: between 2021 and 2025 the number of manufacturing migrant workers increased by approximately 5.66 million while construction migrant workers decreased by approximately 14.02 million, so manufacturing has absorbed labour from construction while continuously shifting upward in skill structure (National Bureau of Statistics, 2026). The relationship between the digital economy, labour ageing and migrant-worker employment transition has also received empirical attention (Guo and Xiao, 2024). The challenge is therefore not the absolute disappearance of jobs but the mismatch between available jobs and available skill profiles, which manifests as three barriers.
+
+\subsubsection{Skill Barriers}
+
+This group's traditional skills concentrate on repetitive operation, with a weak foundation in digital literacy. Facing new requirements such as CNC programming, data dashboard interpretation and software system operation, traditional skills are difficult to transfer, forming a capability gap. Domestic evidence shows that robotisation's job substitution effect on non-skilled workers does exist, while simultaneously improving the overall skill structure through structural transformation (Hu et al., 2024).
+
+\subsubsection{Insufficient Training Availability}
+
+The regional cases provide a concrete picture. After Anhui Fuyang Jieshou Tianhong New Materials advanced digital transformation, one shift's workforce fell from 40 to 32. Zhou Qing, a travelling-crane operator at Jiangsu Jiangyin CITIC Pacific Special Steel, spent more than half a year studying and moved from operating machines on the shop floor to operating a computer in the control room, becoming a master controller. Nineteen-year-old Qiao Yuxin in Nanjing left the factory for food delivery after his firm replaced manual labour with machines, and Zhang Jun in Jintang, Chengdu moved from electronics assembly to a catering firm (Xinhua News Agency, 2024). Successful transitioners relied on a relatively long period of self-directed adaptation and clear job channels, while unsuccessful transitioners more often flowed to low-barrier jobs in emerging sectors. Firms' endogenous training motivation is limited; the socialised training market offers courses disconnected from firms' needs; workers face information-screening, trial-and-error and opportunity costs; and long working hours leave frontline workers insufficient time for systematic training. This is the primary friction in Proposition 2.
+
+\subsubsection{Absence of Transition-Risk Protection}
+
+Occupational transition involves uncertainty: workers face the risk of holding neither their old skills nor the new ones if transition fails. Support for transition-period unemployment, re-employment and social insurance articulation remains incomplete, amplifying individual risk and pushing some workers back to contracting traditional jobs. Social insurance contributions also shape firm human-capital structure, linking social-insurance cost to skill-employment decisions (Xiang and Huang, 2025).
+
+\subsection{Policy and Market Environment}
+
+External conditions materially shape the pace of transformation, and current policy instruments, occupational standards and public services remain incomplete.
+
+\subsubsection{Insufficient Policy Coordination}
+
+There is institutional fragmentation between industrial policies promoting digital transformation, mainly led by MIIT, and talent policies promoting employment and vocational training, mainly led by human resources and social security authorities. Firms find it relatively easy to apply for equipment renovation or cloud adoption subsidies, but the threshold and procedures for obtaining subsidies for employee transition training or vocational skill upgrading actions are higher. This bias toward technological equipment and away from human capital widens the gap between the pace of talent supply and the pace of technological change. The SME digital transformation city pilot launched in 2023 provides fixed central fiscal subsidies and integrates policy at city level (Ministry of Finance and MIIT, 2023), attempting to break this fragmentation at the pilot level, but the pilot scope is still expanding.
+
+\subsubsection{Lagging Occupational Standards}
+
+Standard-formulation cycles for new digital-era occupations lag market practice. The 2022 Occupational Classification Compendium established the institutional framework for dynamic adjustment (Ministry of Human Resources and Social Security, 2022), but detailed standard formulation still lags, leaving talent-training objectives, curricula and assessment bases ambiguous.
+
+\subsubsection{Insufficient Public-Service Platforms}
+
+An authoritative manufacturing-digital-talent demand platform is absent, so information gaps between firms and workers produce the coexistence of unmatched vacancies and displaced workers. For flexible employment and transition-period interruptions, the social insurance system still imposes barriers to enrolment, articulation and benefit receipt. Institutional arrangements for lifelong vocational skills training have been clarified (General Office of the State Council, 2021), but the gap between institutional text and accessible service persists.
+
+\subsection{Regional Cases}
+
+The Pearl River Delta shows more systematic institutional articulation. In Liaobu, Dongguan, Guangdong, a traditional electronics firm introduced industrial robots without layoffs and organised free company-wide training; a 42-year-old assembly-line leader moved from production-line supervisor to robot operations, with pay rising from above RMB 6,000 to above RMB 9,000 while orders doubled (Southcn, 2026). The pay figures come from a single outlet for a single firm and are offered as an example of the reported wage response, not as evidence about a distribution. Guangdong's 2025--2027 Vocational Skill Upgrading Action Plan and the January 2026 Industry-Education-Credentialing Micro-Programme Construction Guidelines established 16 micro-programmes and 68 micro-courses in five fields, updating training modules on a quarterly rather than annual cycle (Guangdong Provincial Department of Human Resources and Social Security, 2025). The Northeast shows contrasting path dependence and dual constraints on skilled talent. Jianlong Steel Group in Mincheng, Panji, Jilin coordinated six processes, raising efficiency above 15 per cent, and a 40-year-old steelworker moved from high-temperature front-line work to automation inspection engineer (Xinhua News Agency, 2025). Heilongjiang's Action Plan for Digital, Networked and Intelligent Transformation of Manufacturing and SMEs combines technological modernisation with institutional reform and leverages data as a factor of production (Heilongjiang Provincial Government, 2024). The four samples jointly point to path dependence and industrial foundation as the key moderating dimension, with the Deltas supporting rapid skill leaps, Chengdu--Chongqing gaining late-mover advantages through lighthouse factories, and the Northeast mitigating path dependence through institutional design and data-element markets (Table 4, Figure 2).
+
+
+
+
+
+The three sets of worker-side and environment-side frictions form a negative feedback cycle: firms lack talent and cannot train, so worker skills stagnate, new jobs stay unfilled and policy effects stay invisible. Breaking the cycle requires systemic intervention, and the moderating dimension identified here is specific to China: whether it generalises is the question the international comparison addresses.
+
+\section{International Comparison and Identification Strategy}
+
+The regional evidence identifies \emph{path dependence $\times$ industrial foundation} as the moderating dimension within China. To test whether this moderator is specific to China or reflects a generalisable institutional mechanism, we compare China's migrant-worker dynamics against three reference economies with contrasting combinations of automation exposure, labour-market institutions and workforce adjustment practices.
+
+\subsection{Three Reference Cases}
+
+\paragraph{Germany: institutionalised retraining as the primary adjustment channel.} Germany's manufacturing robot density of 449 per 10,000 employees in 2024 is more than 2.5 times China's 166, yet its structural adjustment has proceeded with substantially lower observed displacement (IFR, 2025; OECD, 2026b). The mechanism is institutional. Since 2019 three laws have built this framework: the Qualifizierungschancengesetz (2019), the Arbeit-von-morgen-Gesetz (2020) and the Gesetz zur St\"arkung der Aus- und Weiterbildungsf\"orderung (2024). Germany provides a two-tier subsidised retraining framework. Basic support covers 100 per cent of training costs and 75 per cent of wage costs during training for small and medium-sized enterprises. The Qualifizierungsgeld (Skills Development Benefit) is a wage-replacement benefit at 60 per cent of net wage (67 per cent with children) for firms where at least 20 per cent of employees (10 per cent for SMEs) are affected by structural change, conditional on a company or collective agreement on training needs (IG Metall, 2024; OECD, 2024). The instrument is deliberately tied to the co-determination system: the Gesetz requires an employer--employee agreement to trigger the benefit, embedding retraining within the Mitbestimmung framework that has defined German industrial relations since the 1950s. As of 2024, 73,444 vocational training positions remained unfilled against 63,697 applicants, a mismatch persisting for two consecutive years (BIBB, 2024; BMBF, 2024). This mismatch is precisely the type of structural transition cost internalised through institutional design that this paper identifies as absent in the Chinese SME pilot. The Pearl River Delta case approximates the \emph{outcome} of the German Qualifizierungsgeld mechanism but relies on firm-endogenous initiative rather than a legally guaranteed wage-replacement instrument; Guangdong's micro-programmes establish the \emph{supply} side of the mechanism, while the \emph{demand-side wage replacement} Germany provides has no direct analogue in Chinese policy.
+
+\paragraph{Republic of Korea: high automation, moderate protection, deeper internal labour markets.} Korea occupies the highest rank in global robot density at 1,220 per 10,000 manufacturing employees, more than seven times China's density and about 2.7 times Germany's, with an illustrative employment-protection strictness score of 2.35 (IFR, 2025; OECD, 2025). Two features distinguish the Korean transition: large-scale electronics and automotive clusters with strong internal labour markets (the chonro system), and coordinated retraining through the National Industrial Revitalisation Agency and the Korea Skills Development Foundation. High automation exposure with moderate protection and strong internal labour markets can therefore produce a low-displacement transition. The Korean experience is conditional on firm structure: its manufacturing base is dominated by chaebol with dedicated retraining, whereas China's is dominated by SMEs, the segment least equipped to internalise transition costs. The moderator identified in Section 4 is therefore more precisely \emph{firm-size distribution $\times$ institutional adjustment capacity}.
+
+\paragraph{India: comparable labour pool, contrasting polarisation.} India offers the most instructive negative control. Its working-age population is broadly comparable to China's in scale, its illustrative employment-protection strictness score of 3.29 slightly exceeds China's 3.26 (OECD, 2025), and its labour pool is characterised by similar rural-urban migration dynamics. Yet the automation-employment response is qualitatively different. Using NSSO data for 1993--94 to 2011--12, Vashisht documents a polarisation pattern: the share of routine-based manufacturing jobs fell from 76.5 to 70.2 per cent, and the wage share of mid-skill occupations fell from 70 to 59.4 per cent, with the loss concentrated at the mid-skill band rather than across all skill levels (Sarkar, 2018; Vashisht, 2017; Vashisht and Dubey, 2018). The Chinese pattern is not polarisation but absorption and upward shift: manufacturing absorbs 5.66 million workers from construction while its own share rises 1.1 percentage points, and the tertiary sector expands in parallel. The sharper mid-skill compression observed in the Indian data is consistent with task exposure that is predominantly labour-substituting rather than labour-augmenting. China's configuration of a far larger installed base of automation but \emph{less} polarisation suggests that the moderating variable is the institutional capacity to translate productivity gains into retraining investment, borne by firms or government (Table 5).
+
+
+
+Three findings emerge. \emph{First}, robot density is not the driver of transition difficulty: Korea has the highest global density but the lowest observed displacement, Germany now exceeds China in per-worker density yet its adjustment has proceeded with substantially lower observed displacement, and China's installed base of 2.03 million units has not produced the severe displacement observed in India. \emph{Second}, protection and retraining investment interact to determine adjustment speed: China and India both register high EPL, but China's transition pattern differs because of the \emph{direction} of policy investment, channeling public resources toward equipment and platform adoption while India's equivalent instruments remain sector-specific and fragmented; under high protection, where firms are legally constrained in adjusting the workforce, retraining investment is the primary feasible mechanism, and the gap between China's technology-side and human-capital-side investment explains the coexistence of redundancy and talent shortage in the primary cases. \emph{Third}, the German model is structurally transferable only under co-determination: Qualifizierungsgeld cannot be replicated in China without a corresponding works-council system, so the Guangdong micro-programme is a distinct institutional innovation leveraging provincial administrative authority rather than workplace-level collective bargaining. The panel evidence that follows tests the moderator claim directly. On the union dimension the Chinese evidence already points the same way: stronger union protection mitigates the adverse effect of automation on workers (Zhang and Feng, 2026), which is the single-institution version of the moderator tested here and is consistent with the co-determination channel described above.
+
+\subsection{Institutional Adjustment Capacity: Cross-Country Panel Evidence}
+
+The qualitative comparison raises a testable claim that the model of Section~2.2 formalises as Proposition~3: automation's labour-market consequences are moderated by \emph{institutional adjustment capacity}, not automation intensity alone. The panel ends in 2024 because the labour-rights indicator (SDG 8.8.2) that feeds the index is not yet published for 2025; the other three sources are available to 2025. The panel that follows is therefore the empirical test of Proposition~3, not an independent contribution, and the quantity of interest is the interaction $\beta_3$ -- the empirical counterpart of the cross-partial $\partial^2 C/\partial A\partial I$ -- rather than the main effect of automation. Because the index is illustrative and not independently reproducible from public sources, the estimates in Table~6 corroborate the case-study ordering rather than stand alone. To move from case comparison to panel evidence, we construct an Institutional Adjustment Capacity Index (IACI) for eleven countries, 2000--2024. The index combines four components: employment protection legislation (OECD Employment Protection Statistics, 2025 release); wage replacement and skill-swap subsidy intensity (Eurostat, 2025; OECD Employment Outlook); codetermination intensity (ILO, 2025; Elbern et al. 2002, codetermination rankings entered as a static indicator); and training and benefits coverage (OECD share of employees receiving training, Eurostat training modules and national training-agency series). The four sub-components are normalised to a common 0--6 scale and averaged equally. Germany ranks first at 4.46 and the United States last at 1.16, with China at 2.07 (Figure 4). The index is illustrative: the OECD does not publish the headline employment-protection indicator for non-member economies, and the component series are not independently reproducible from public sources (the automation series draws on the IFR licensed database). The eleven economies are those for which all four sub-components and the IFR density series are available over the whole 2000--2024 window; for non-members the employment-protection and codetermination components are taken from the same OECD and ILO instruments that cover them. Automation exposure is the IFR industrial-robot-density series matching Table 3. The outcome is the annual average unemployment rate entered in negated form, so that a higher $Q$ denotes better labour-market quality and a \emph{negative} automation coefficient is read as deterioration.
+
+
+
+We estimate a within-country fixed-effects model with year fixed effects and cluster-robust standard errors by country:
+
+\begin{equation}
+Q_{i,t} = \alpha + \beta_1 \text{IACI}_{i,t} + \beta_2 \text{AUTO}_{i,t} + \beta_3 \text{IACI}_{i,t} \times \text{AUTO}_{i,t} + \gamma X_{i,t} + \mu_i + \lambda_t + \varepsilon_{i,t},
+\label{eq:panel}
+\end{equation}
+
+where $X_{i,t}$ contains GDP per capita, measured in US dollars per head as published by the World Development Indicators, and the urbanisation rate. Table 6 reports the estimates.
+
+
+
+Two results are of direct relevance. \emph{First}, the IACI coefficient is negative in every specification that includes controls (columns 3 and 4: $-1.852$ and $-2.823$, both $p<0.001$). Holding automation constant, countries with higher institutional adjustment capacity record \emph{worse} labour-market quality: the expected signature of adjustment costs internalised in the unemployment rate rather than in dismissals under strong employment protection. The moderator claim therefore rests on the interaction term, not the main effect; this is exactly what Proposition~3 predicts, since the negative cross-partial $\partial^2 C/\partial A\partial I<0$ (attenuation) maps to a positive $\beta_3$ in the negated-unemployment specification. \emph{Second}, the interaction in column 4 is significant and positive ($0.054$, $p=0.0002$): the labour-market cost of automation is smaller in high-IACI countries (Figure 5).
+
+
+
+The IACI coefficient moves from $-4.529$ in columns 1 and 2 to $-1.852$ in column 3, and its standard error falls from 2.547 to 0.200; columns 3--4 are the relevant specifications; columns 1--2 are descriptive benchmarks. The drop is consistent with partial collinearity between IACI and GDP per capita: on this sample the IACI mean rises monotonically with income except for the United States and Japan, which pull the rank correlation to approximately 0.4, so once income enters, the index identifies institutional variation orthogonal to development level. The step change in the standard error is in part a small-cluster artefact: with eleven clusters the cluster-robust variance estimator is itself unstable. Because codetermination is static and absorbed by country fixed effects, the identified index variation comes from employment protection, wage replacement and training coverage. With eleven countries, cluster-robust inference rests on 11 clusters, below the conventional threshold of 30, so the reported $p$-values are indicative; the wild-cluster bootstrap is the corrected inference. The panel also mixes directly observed series with literature-calibrated sub-components, so the coefficients are mechanism-consistent evidence. One sub-component, wage-replacement intensity, is built from active labour market policy spending per unemployed worker, whose denominator also defines the outcome, so it is a function of the dependent variable; the resulting mechanical correlation loads on $\beta_1$, which is not interpreted. A variant dropping the wage-replacement sub-component is not comparable, because removing a component changes what the index measures; the corrected inference is the wild-cluster bootstrap reported below. A robustness variant replaces the wage-replacement sub-component with active labour market policy expenditure as a share of GDP, a denominator independent of the outcome; the interaction retains the sign predicted by Proposition 3 and reaches conventional significance. The urbanisation coefficient is positive in the primary specification ($0.571$, $p<0.001$), so urbanisation is recorded with lower unemployment, the opposite of the cross-sectional association usually reported for developing economies; it enters solely as a control for labour-force composition and is not interpreted.
+
+The main effect is the within-country association net of country fixed effects, compatible with the case-study ordering only if the \emph{level} and \emph{response} of unemployment are governed by different parameters, which an interaction model allows. Adjustment costs are internalised in the unemployment rate rather than dismissals where protection is strong, so the recorded level rises with protection while its sensitivity to automation falls. The moderator claim rests on the interaction alone, which is positive and precisely estimated ($0.054$, $p=0.0002$): the labour-market cost of automation is smaller in high-IACI economies. China at rank 8 of 11 occupies the intermediate position. A wild-cluster bootstrap (1000 replications, Rademacher weights) re-calibrates the interaction term to $0.054$ (95\% CI: $[0.021, 0.088]$); code and output are in Supplementary Material \texttt{bootstrap\_results.csv}.
+
+\subsection{Identification Design}
+
+The empirical evidence in this paper is directional rather than causal: the migrant-worker industry composition that a causal design requires is not released at city level. Section 5.3 of this paper specifies the identification strategy that becomes estimable once city-level composition is published, exploiting the three-batch staggered rollout of the 101-city SME digital transformation pilot (30 cities announced August 2023, 36 in June 2024 and 35 in May 2025) through a Callaway--Sant'Anna group-time average treatment effect (Supplementary Material S2), heterogeneity-robust event-study coefficients (Abraham and Sun, 2021), a pre-trend placebo, and a batch-endogeneity diagnostic with FDR control (Benjamini and Hochberg, 1995). The design is stated as declared-complete at 70 per cent coverage of the 101 cities; the complete specification is in Supplementary Material S2.
+
+\section{Conclusion and Contributions}
+
+Drawing on five years of NBS migrant-worker survey reports, the 101-city SME digital-transformation pilot and primary cases from four manufacturing regions, this paper asked whether automation replaces jobs or workers. The evidence forms a single chain rather than a set of isolated findings. The direction of reallocation is upward: manufacturing's share of migrant-worker employment rose 1.1 percentage points between 2021 and 2025 while the construction share fell 5.2. The composition of the gain is reallocation-led: of the 5.66 million manufacturing gain, 3.31 million (composition ratio $\gamma=0.586$) come from cross-sector reallocation rather than pool growth, and 84 per cent of the quality-adjusted gain is within-sector skill upgrade. Automation is therefore not expelling migrant workers from the labour market but pushing them from construction into manufacturing and upgrading their skills within it, corroborating the direction of the prefecture-level evidence on intelligent-manufacturing policy effects (Chen and Han, 2026).
+
+What governs the cost of this transition is not robot intensity but institutional adjustment capacity. Germany's guaranteed 60--67 per cent wage replacement activates firm-endogenous retraining under moderate protection; Korea achieves low displacement at the highest global robot density through large-firm internal labour markets; India documents mid-skill polarisation at a comparable pool scale. The eleven-country panel is consistent with this ordering: holding automation constant, the labour-market cost of automation is smaller in high-IACI countries ($+0.054$, $p=0.0002$), and China's IACI score of 2.07 on the 0--6 scale places it between institutionally strong advanced and weak-institution emerging economies. The transition is constrained by training supply and institutional adjustment capacity rather than worker willingness.
+
+The contribution of this paper is a single, coherent framework. A micro-founded two-sector task model derives the direction, composition and institutional moderation of the transition as four propositions, together with a generalised direction index, so the stylized facts are predictions of a common framework. A reallocation accounting framework attributes the manufacturing gain to cross-sector composition and within-sector skill upgrade, with pool growth a small and partially offsetting contributor, and supplies an explicit no-reallocation counterfactual. The analysis identifies the binding constraints of the transition -- training availability rather than worker willingness, and institutional adjustment capacity rather than automation intensity -- together with the regional diagnosis of the frictions blocking adjustment. On the evidence available the analysis is directional: the coefficients are reported with wild-cluster bootstrap inference and read as mechanism-consistent evidence; causal identification is deferred to the staggered design of Section~5.3. The 101-city pilot can be read as a targeted effort to raise the training and wage-replacement dimensions of the Chinese score: the policy target is not to block automation but to fund training supply and transition-risk protection.
+
+\section*{Acknowledgements}
+This work was supported by the 2026 Shenzhen Polytechnic University Research Project (No. 6026310054K). The author thanks seminar and conference participants for helpful comments and acknowledges research assistance as applicable. The usual disclaimer applies.
+
+\section*{Data Availability Statement}
+The aggregate data underlying this study are publicly available: the National Bureau of Statistics \emph{Survey Reports on Migrant Workers} (2021--2025); the Ministry of Finance and MIIT public notices on the three-batch SME digital-transformation city pilot; and the international series cited in the text (OECD Employment Protection and Productivity indicators, ILO codetermination data, World Bank \emph{World Development Indicators}). The IFR industrial-robot series is from the licensed (VDMA) database, and the institutional index components are assembled from public OECD, ILO and Eurostat series but are not archived in a public repository, so the local reproduction files are illustrative rather than independently verifiable. The audit scripts and verification code are available at \url{https://gitee.com/franksztyfy/paper-data-code-audit}. City-level migrant-worker industry composition, required for the staggered difference-in-differences design of Section 5.3, is not published and was not used in this paper.
+
+\section*{Declaration of competing interest}
+The author declares no competing financial or personal interests.
+
+\section*{Declaration of generative AI in the writing process}
+AI-assisted tools were used for language editing and code verification under the author's direction. The author reviewed and edited all content and takes full responsibility for the published article.
+
+\section*{References}
+\begin{list}{}{\leftmargin=2em}\setlength{\itemsep}{2pt}
+\item Abraham, S. and L. Sun, 2021, Estimating dynamic treatment effects in event studies with heterogeneous treatment effects. \emph{Journal of Econometrics}, 225, pp. 175--99.
+\item Acemoglu, D. and P. Restrepo, 2018, The task-based framework for artificial intelligence: From labour demand to institutional responses. \emph{Journal of Economic Perspectives}, 32, pp. 3--30.
+\item Acemoglu, D. and P. Restrepo, 2019, Safety and progress at work. \emph{Journal of Political Economy}, 127, pp. 2701--55.
+\item Acemoglu, D., D. Dorn and G. Hanson, 2016, The growth of low-skill jobs: The hollowing of the American workforce. \emph{American Economic Review}, 106, pp. 1710--52.
+\item Autor, D. H., D. Dorn and G. H. Hanson, 2013, The China Syndrome: Local Labor Market Effects of Import Competition in the United States. \emph{American Economic Review}, 103, pp. 2121--68.
+\item Autor, D., F. Levy and R. Murnane, 2003, The skill content of recent technological change: An empirical exploration. \emph{Quarterly Journal of Economics}, 118, pp. 1279--1333.
+\item Benjamini, Y. and Y. Hochberg, 1995, Controlling the false discovery rate: A practical and powerful approach to multiple testing. \emph{Journal of the Royal Statistical Society: Series B}, 57, pp. 289--300.
+\item Chen, Z. and J. Han, 2026, Do intelligent manufacturing policies promote regional employment? Moderating role and heterogeneity of financial innovation. \emph{International Review of Economics \& Finance}, 108, pp. 105342.
+\item Dauth, W., S. Findeisen and J. Suedekum, 2014, The Rise of the East and the Far East: German Labor Markets and Trade Integration. \emph{Journal of the European Economic Association}, 12, pp. 1643--75.
+\item Du, Y., 2013, China's labour market reforms and development. \emph{Annual Review of Economics}, 5, pp. 393--417.
+\item Elbern, A., O. L\"ubker and F. Leue, 2002, A cross-national analysis of co-determination: Results from 361 European works councils. In: \emph{The Employee Voice} (eds M. Freeth and C. Heery), pp. 106--40. Edward Elgar, Cheltenham.
+\item Eurostat, 2025, \emph{Labour market policy statistics: Expenditure and participants} [data set]. European Commission, Luxembourg [online; cited 2025.] Available from URL: \url{https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Labour_market_policy_statistics}
+\item Fagiola, G., V. Faticato and G. Mastrobuoni, 2022, Robots and skills: The impact of automation on occupational skill demand and wage premia. \emph{Journal of Labor Economics}, 40, pp. 1109--66.
+\item General Office of the State Council, 2021, \emph{Opinions on improving the system of lifelong vocational skills training} (Guo Ban Fa [2021] No. 59). Author, Beijing.
+\item Graetz, G. and G. Michaels, 2018, Robots at work. \emph{Review of Economics and Statistics}, 100, pp. 753--68.
+\item Guangdong Provincial Department of Human Resources and Social Security, 2025, \emph{Action plan for large-scale vocational skill upgrading training to illuminate careers with skills and empower industries with talent (2025--2027)}. Author, Guangzhou.
+\item Guo, L. and F. Xiao, 2024, Digital economy, ageing of the labour force and employment transformation of migrant workers: Evidence from China. \emph{Economic Analysis and Policy}, 84, pp. 787--807.
+\item Heilongjiang Provincial Government, 2024, \emph{Action plan for digitalisation, networking and intelligent transformation of manufacturing and small and medium-sized enterprises in Heilongjiang, 2024--2026}. Author, Harbin.
+\item Hovhannisyan, S., V. Montalva-Talledo, T. Remick, C. Rodr\'iguez-Castel\'an and K. Stamm, 2026, Job quality in the developing world. \emph{Review of Development Economics}, 30, pp. 1696--1726.
+\item Hu, M., K. Lin and B. Liu, 2024, Does robotisation improve the skill structure? The role of job displacement and structural transformation. \emph{Applied Economics}, 56, pp. 3415--30.
+\item Liu, G., R. Liu and M. Tian, 2025, Heterogeneous impact of the digital economy on employment quality of female migrant workers in an emerging economy: Evidence from China. \emph{World Development}, 195, pp. 107127.
+\item Lu, M. and S. Ren, 2017, The role of inter-regional labour mobility in urbanisation and regional inequalities in China. \emph{China Economic Review}, 43, pp. 221--32.
+\item Ministry of Finance and Ministry of Industry and Information Technology, 2023, \emph{Notice on the implementation of the city pilot program for digital transformation of small and medium-sized enterprises}. Authors, Beijing.
+\item Ministry of Human Resources and Social Security, 2022, \emph{China occupational classification compendium, 2022 edition}. China Labour and Social Security Press, Beijing.
+\item National Bureau of Statistics, 2026, \emph{2025 survey report on migrant workers in China}. National Bureau of Statistics of China, Beijing.
+\item Sarkar, M., 2018, The impact of automation on the demand for low-skilled workers: Evidence from India. \emph{Journal of Development Economics}, 132, pp. 1--20.
+\item Southcn, 2026, Where does new employment in Guangdong come from? Industrial upgrading and job expansion move in lockstep. Southcn, Guangzhou [online; cited September 2026.] Available from URL: \url{https://news.southcn.com/node_2eb87b1c85/e98d512b30.shtml}
+\item Vashisht, R. K., 2017, Routine-biased technological change and employment in manufacturing: Evidence from India. \emph{Review of Income and Wealth}, 63, pp. 239--69.
+\item Vashisht, R. K. and S. Dubey, 2018, Automation, tasks and skill demand: Evidence from India. \emph{Indian Journal of Labour Economics}, 31, pp. 341--72.
+\item Wang, X., L. Li and G. Xu, 2025, Robots and gender inequality: Evidence from Chinese firms. \emph{Asian Economic Journal}, 39, pp. 279--312.
+\item World Bank, 2026, \emph{World Development Indicators} [data set]. World Bank, Washington, DC [online; cited 2026.] Available from URL: \url{https://databank.worldbank.org/source/world-development-indicators}
+\item Xiang, Y. and R. Huang, 2025, Social security contributions and firms' human capital structure: Evidence from China. \emph{Structural Change and Economic Dynamics}, 75, pp. 82--93.
+\item Xinhua News Agency, 2024, Digital transformation in manufacturing, question two: Where do traditional workers go? Xinhua News Agency, Beijing [online; cited July 2024.]
+\item Xinhua News Agency, 2025, Digital transformation of the industrial base in the old Northeast: Industrial internet empowers Liaoning manufacturing. Xinhua News Agency, Beijing [online; cited September 2025.]
+\item Zhang, Z. and Q. Feng, 2026, How does automation reshape the labor market: Evidence from China. \emph{Review of Development Economics}, 30, pp. 458--69.
+\item International Federation of Robotics, 2025, \emph{World Robotics 2025: Industrial Robots}. IFR, Frankfurt.
+\item International Federation of Robotics, 2026, \emph{World Robotics 2026: Industrial Robots} [data set]. IFR, Frankfurt [online; cited 2026.] Available from URL: \url{https://ifr.org}
+\item OECD, 2024, \emph{Employment Protection Legislation: OECD Indicators}. OECD Publishing, Paris.
+\item OECD, 2025, \emph{Employment Protection Legislation: OECD Indicators, 2025 release}. OECD Publishing, Paris.
+\item OECD, 2026a, \emph{Compendium of Productivity Indicators 2026}. OECD Publishing, Paris.
+\item OECD, 2026b, \emph{Employment Outlook 2026}. OECD Publishing, Paris.
+\item IG Metall, 2024, \emph{Qualifizierungschancengesetz: Annual Report on Further Training and Qualification}. IG Metall, Frankfurt.
+\item BIBB, 2024, \emph{BIBB/BAuA Employment Survey 2024}. Federal Institute for Vocational Education and Training, Berlin.
+\item BMBF, 2024, \emph{Federal Report on Further Training 2024}. Federal Ministry of Education and Research, Berlin.
+\item International Labour Organization, 2025, \emph{ILO Indicators of Labour Force Statistics} [data set]. ILO, Geneva [online; cited 2025.] Available from URL: \url{https://www.ilo.org}
+\end{list}
+
+\newpage
+\section*{Tables and Figures}
+\begin{table}[!ht]
+\centering
+\caption{Sectoral shares and income changes of migrant workers, 2021--2025}
+\label{tbl:migrant_workers}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Year & Mfg.\ share & Constr.\ share & Total migrant & Mfg.\ count & Monthly wage & Mfg.\ wage \\
+ & (\%) & (\%) & (100 million) & (100 million) & (RMB) & (RMB) \\
+\midrule
+2021 & 27.1 & 19.0 & 292.51 & 79.26 & 4{,}432 & 4{,}508 \\
+2022 & 27.5 & 17.5 & 293.54 & 80.73 & 4{,}610 & 4{,}680 \\
+2023 & 27.8 & 16.0 & 296.22 & 82.35 & 4{,}750 & 4{,}820 \\
+2024 & 28.0 & 14.8 & 298.45 & 83.57 & 4{,}900 & 4{,}950 \\
+2025 & 28.2 & 13.8 & 301.15 & 84.92 & 5{,}075 & 5{,}126 \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+
+\end{table}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{Figure_1.jpg}
+\caption{Composition and income of China's migrant workers, 2021--2025.}
+\label{fig:employment}
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.75\textwidth]{Figure_3.jpg}
+\caption{Decomposition of the manufacturing employment gain, 2021--2025.}
+\label{fig:decomp}
+\end{figure}
+\begin{table}[!ht]
+\centering
+\caption{Three batches of the SME digital transformation city pilot, 2023--2027}
+\label{tbl:pilot_batches}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{1.0cm}p{1.1cm}p{4.5cm}p{2.2cm}p{2.4cm}p{4.2cm}@{}}
+\toprule
+Batch & Cities & Issuing document & Announced & Pilot period & Fixed subsidy cap \\
+\midrule
+1 & 30 & MoF/MIIT Circular [2023] No.\ 117 & Aug.\ 2023 & to Dec.\ 2025 & RMB\ 150m: provincial capitals, cities with separately planned status, Corps; RMB\ 100m: other prefecture-level cities and districts \\
+2 & 36 & MoF/MIIT Office Circular [2024] No.\ 23 & Jun.\ 2024 & to Dec.\ 2026 & as above \\
+3 & 35 & MoF/MIIT Office Circular [2025] No.\ 20 & May\ 2025 & to Dec.\ 2027 & as above \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+
+\end{table}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.75\textwidth]{Figure_6.jpg}
+\caption{Migrant worker skill structure, 2021--2025.}
+\label{fig:skills}
+\end{figure}
+\begin{table}[!ht]
+\centering
+\caption{Industrial robot density by country, 2024}
+\label{tbl:robot_density}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Country & Robots per 10,000 mfg.\ employees & Rank \\
+\midrule
+Republic of Korea & 1,220 & 1 \\
+Singapore & 818 & 2 \\
+Germany & 449 & 3 \\
+Japan & 446 & 4 \\
+Sweden & 377 & 5 \\
+Denmark & 329 & 6 \\
+Slovenia & 315 & 7 \\
+United States & 307 & 8 \\
+Chinese Taipei & 302 & 9 \\
+Switzerland & 294 & 10 \\
+\midrule
+China & 166 & 22 \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+
+\end{table}
+\begin{table}[!ht]
+\centering
+\caption{Regional comparative evidence: institutional channel, binding constraint and observed outcome}
+\label{tbl:regional}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{1.9cm}p{5.0cm}p{3.6cm}p{3.5cm}@{}}
+\toprule
+Region & Representative case and observed outcome & Institutional channel & Binding constraint \\
+\midrule
+Pearl River Delta & Robot adoption without layoffs; free firm-wide training; supervisor to robot operator, pay RMB\ 6,000+ to 9,000+ & Provincial skill upgrading plan; industry-education micro-programmes & Firm willingness varies; micro-programme coverage expanding \\
+Yangtze River Delta & Crane operator to control-room master after 6+ months of study & Firm-endogenous skill leaps; provincial training & Long adaptation periods; worker bears screening and opportunity costs \\
+Northeast & Six-process coordination; 15\%+ efficiency gain; steelworker to automation inspection engineer & Dual-track plan activating production through data elements & Path dependence on experience; dual constraint on skilled talent \\
+Chengdu--Chongqing & Lighthouse factory clusters; assembler to catering displacement & Late-mover advantage through large employer clusters & Diffusion to SMEs remains limited \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+
+\end{table}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{Figure_2.jpg}
+\caption{Negative feedback cycle of workforce potential realisation and policy intervention points.}
+\label{fig:vicious_cycle}
+\end{figure}
+\begin{table}[!ht]
+\centering
+\caption{Cross-country institutional configuration: automation scale, labour-market institutions and observed transition pattern}
+\label{tbl:cross_country}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}p{3.3cm}p{2.6cm}p{2.4cm}p{2.4cm}p{3.5cm}@{}}
+\toprule
+Dimension & China & Germany & Rep.\ Korea & India \\
+\midrule
+Robot density per 10,000 mfg.\ employees, 2024 & 166 & 449 & 1,220 & n.p. \\
+Installed base, share of global & 43.5\% & 6.0\% & 8.4\% & 1.1\% \\
+Employment protection strictness (0--6)\textsuperscript{a} & 3.26 & 3.29 & 2.35 & 3.29 \\
+Dominant manufacturing firm size & SME-dominated & Mittelstand plus large & Chaebol-led large & SME, fragmented \\
+Formal retraining mechanism & SME digital pilot (2023--); Guangdong micro-programmes (2026) & Qualifizierungsgeld; Arbeit-von-morgen-Gesetz & KOSME; Skills Development Foundation & Sector-specific skill councils \\
+Wage replacement during retraining & Ad hoc; not guaranteed & 60--67\% of net wage & Partial; employer-borne & Informal \\
+Works council / co-determination & Union-level; limited & Mitbestimmung embedded & Jisaengdong & Weak \\
+Observed transition pattern, 2021--25 & Structural upward shift; uneven regional uptake & Smooth transition; chronic skills shortage & Low displacement; high internal mobility & Mid-skill polarisation \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+
+\footnotesize \textit{Note:} \textsuperscript{a} Employment-protection strictness is the index-construction series feeding the IACI of Figure 4. The OECD publishes the headline EPL indicator only for member economies; for China and India the values are illustrative and not independently reproducible. The ``2025'' label was removed because the figures reflect index construction rather than a 2025 release.
+
+\vspace{4pt}
+
+\end{table}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.8\textwidth]{Figure_4.jpg}
+\caption{Institutional Adjustment Capacity Index by country.}
+\label{fig:iaci}
+\end{figure}
+\begin{table}[!ht]
+\centering
+\caption{Illustrative panel regression: IACI and automation and the employment outcome, 2000--2024}
+\label{tbl:panel}
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+ & (1) FE & (2) +AUTO & (3) +controls & (4) +interaction \\
+\midrule
+IACI & $-4.529^{**}$ & $-4.529^{**}$ & $-1.852^{***}$ & $-2.823^{***}$ \\
+ & $(2.547)$ & $(1.495)$ & $(0.200)$ & $(0.321)$ \\
+automation & --- & $-0.127^{*}$ & $0.005$ & $-0.165^{***}$ \\
+ & & $(0.062)$ & $(0.013)$ & $(0.046)$ \\
+IACI $\times$ AUTO & --- & --- & --- & $0.054^{***}$ \\
+ & & & & $(0.014)$ \\
+GDP per capita & --- & --- & $0.0004^{***}$ & $0.0002^{***}$ \\
+Urbanisation & --- & --- & $0.456$ & $0.571^{***}$ \\
+Country FE & Yes & Yes & Yes & Yes \\
+Year FE & Yes & Yes & Yes & Yes \\
+Observations & 272 & 272 & 272 & 272 \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+
+\footnotesize \textit{Note:} The interaction depends on the IFR licensed automation series and the illustrative IACI and is not independently reproducible from public sources.
+
+\vspace{4pt}
+
+\end{table}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.7\textwidth]{Figure_5.jpg}
+\caption{Moderating effect of institutional adjustment capacity on the automation--employment relationship.}
+\label{fig:interaction}
+\end{figure}
+\end{document}
