@@ -1,0 +1,27 @@
+# Never commit secrets / tokens / keys
+_subinfo.txt
+_instabox.txt
+*.token
+*.secret
+*.key
+*.pem
+.env
+.env.*
+
+# Local scratch / cache
+__pycache__/
+*.pyc
+*~
+.DS_Store
+Thumbs.db
+
+# LaTeX build artifacts (keep .tex and final .pdf only)
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
