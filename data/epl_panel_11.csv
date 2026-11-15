@@ -1,0 +1,370 @@
+﻿country,iso3,year,ept
+Brazil,BRA,2008,4.125
+Brazil,BRA,2009,4.125
+Brazil,BRA,2010,4.125
+Brazil,BRA,2011,4.125
+Brazil,BRA,2012,4.125
+China,CHN,2008,1.75
+China,CHN,2009,1.75
+China,CHN,2010,1.75
+China,CHN,2011,1.75
+China,CHN,2012,1.75
+France,FRA,1985,3.0625
+France,FRA,1986,3.0625
+France,FRA,1987,3.0625
+France,FRA,1988,3.0625
+France,FRA,1989,3.0625
+France,FRA,1990,3.0625
+France,FRA,1991,3.625
+France,FRA,1992,3.625
+France,FRA,1993,3.625
+France,FRA,1994,3.625
+France,FRA,1995,3.625
+France,FRA,1996,3.625
+France,FRA,1997,3.625
+France,FRA,1998,3.625
+France,FRA,1999,3.625
+France,FRA,2000,3.625
+France,FRA,2001,3.625
+France,FRA,2002,3.625
+France,FRA,2003,3.625
+France,FRA,2004,3.625
+France,FRA,2005,3.625
+France,FRA,2006,3.625
+France,FRA,2007,3.625
+France,FRA,2008,3.625
+France,FRA,2009,3.625
+France,FRA,2010,3.625
+France,FRA,2011,3.625
+France,FRA,2012,3.625
+France,FRA,2013,3.625
+France,FRA,2014,3.625
+France,FRA,2015,3.625
+France,FRA,2016,3.5
+France,FRA,2017,3.5
+France,FRA,2018,3.5
+France,FRA,2019,3.5
+France,FRA,2020,3.5
+France,FRA,2021,3.5
+France,FRA,2022,3.5
+France,FRA,2023,3.5
+France,FRA,2024,3.5
+France,FRA,2025,3.5
+Germany,DEU,1985,4.625
+Germany,DEU,1986,2.875
+Germany,DEU,1987,2.875
+Germany,DEU,1988,2.875
+Germany,DEU,1989,2.875
+Germany,DEU,1990,2.875
+Germany,DEU,1991,2.875
+Germany,DEU,1992,2.875
+Germany,DEU,1993,2.875
+Germany,DEU,1994,2.875
+Germany,DEU,1995,2.75
+Germany,DEU,1996,2.75
+Germany,DEU,1997,2.125
+Germany,DEU,1998,1.625
+Germany,DEU,1999,1.625
+Germany,DEU,2000,1.625
+Germany,DEU,2001,1.625
+Germany,DEU,2002,1.625
+Germany,DEU,2003,1.125
+Germany,DEU,2004,0.625
+Germany,DEU,2005,0.625
+Germany,DEU,2006,0.625
+Germany,DEU,2007,0.625
+Germany,DEU,2008,0.625
+Germany,DEU,2009,0.625
+Germany,DEU,2010,0.625
+Germany,DEU,2011,0.625
+Germany,DEU,2012,0.625
+Germany,DEU,2013,0.75
+Germany,DEU,2014,0.75
+Germany,DEU,2015,0.75
+Germany,DEU,2016,0.75
+Germany,DEU,2017,0.75
+Germany,DEU,2018,1.0
+Germany,DEU,2019,1.0
+Germany,DEU,2020,1.0
+Germany,DEU,2021,1.0
+Germany,DEU,2022,1.0
+Germany,DEU,2023,1.0
+Germany,DEU,2024,1.0
+Germany,DEU,2025,1.0
+Italy,ITA,1985,5.25
+Italy,ITA,1986,5.25
+Italy,ITA,1987,5.25
+Italy,ITA,1988,4.875
+Italy,ITA,1989,4.875
+Italy,ITA,1990,4.875
+Italy,ITA,1991,4.875
+Italy,ITA,1992,4.75
+Italy,ITA,1993,4.75
+Italy,ITA,1994,4.75
+Italy,ITA,1995,4.75
+Italy,ITA,1996,4.75
+Italy,ITA,1997,4.75
+Italy,ITA,1998,3.625
+Italy,ITA,1999,3.625
+Italy,ITA,2000,3.25
+Italy,ITA,2001,3.25
+Italy,ITA,2002,2.375
+Italy,ITA,2003,2.0
+Italy,ITA,2004,2.0
+Italy,ITA,2005,2.0
+Italy,ITA,2006,2.0
+Italy,ITA,2007,2.0
+Italy,ITA,2008,2.0
+Italy,ITA,2009,2.0
+Italy,ITA,2010,2.0
+Italy,ITA,2011,2.0
+Italy,ITA,2012,2.0
+Italy,ITA,2013,2.0
+Italy,ITA,2014,2.0
+Italy,ITA,2015,1.625
+Italy,ITA,2016,1.625
+Italy,ITA,2017,1.625
+Italy,ITA,2018,1.625
+Italy,ITA,2019,2.25
+Italy,ITA,2020,2.25
+Italy,ITA,2021,2.25
+Italy,ITA,2022,2.25
+Italy,ITA,2023,2.25
+Italy,ITA,2024,1.875
+Italy,ITA,2025,1.875
+Japan,JPN,1985,1.6875
+Japan,JPN,1986,1.6875
+Japan,JPN,1987,1.6875
+Japan,JPN,1988,1.6875
+Japan,JPN,1989,1.6875
+Japan,JPN,1990,1.6875
+Japan,JPN,1991,1.6875
+Japan,JPN,1992,1.6875
+Japan,JPN,1993,1.6875
+Japan,JPN,1994,1.6875
+Japan,JPN,1995,1.6875
+Japan,JPN,1996,1.6875
+Japan,JPN,1997,1.5
+Japan,JPN,1998,1.5
+Japan,JPN,1999,1.5
+Japan,JPN,2000,0.875
+Japan,JPN,2001,0.875
+Japan,JPN,2002,0.875
+Japan,JPN,2003,0.875
+Japan,JPN,2004,0.875
+Japan,JPN,2005,0.875
+Japan,JPN,2006,0.875
+Japan,JPN,2007,0.875
+Japan,JPN,2008,0.875
+Japan,JPN,2009,0.875
+Japan,JPN,2010,0.875
+Japan,JPN,2011,0.875
+Japan,JPN,2012,0.875
+Japan,JPN,2013,0.875
+Japan,JPN,2014,1.0
+Japan,JPN,2015,1.0
+Japan,JPN,2016,1.0
+Japan,JPN,2017,1.0
+Japan,JPN,2018,1.0
+Japan,JPN,2019,1.0
+Japan,JPN,2020,1.0
+Japan,JPN,2021,1.0
+Japan,JPN,2022,1.0
+Japan,JPN,2023,1.0
+Japan,JPN,2024,1.0
+Japan,JPN,2025,1.0
+Korea,,1990,3.25
+Korea,,1991,3.25
+Korea,,1992,3.25
+Korea,,1993,3.25
+Korea,,1994,3.25
+Korea,,1995,3.25
+Korea,,1996,3.25
+Korea,,1997,3.25
+Korea,,1998,3.25
+Korea,,1999,2.25
+Korea,,2000,2.25
+Korea,,2001,2.25
+Korea,,2002,2.25
+Korea,,2003,2.25
+Korea,,2004,2.25
+Korea,,2005,2.25
+Korea,,2006,2.25
+Korea,,2007,2.25
+Korea,,2008,2.25
+Korea,,2009,2.25
+Korea,,2010,2.25
+Korea,,2011,2.25
+Korea,,2012,2.25
+Korea,,2013,2.25
+Korea,,2014,2.25
+Korea,,2015,2.25
+Korea,,2016,2.25
+Korea,,2017,2.25
+Korea,,2018,2.25
+Korea,,2019,2.25
+Korea,,2020,2.25
+Korea,,2021,2.25
+Korea,,2022,2.25
+Korea,,2023,2.25
+Korea,,2024,2.25
+Korea,,2025,2.25
+Mexico,MEX,1990,4.0
+Mexico,MEX,1991,4.0
+Mexico,MEX,1992,4.0
+Mexico,MEX,1993,4.0
+Mexico,MEX,1994,4.0
+Mexico,MEX,1995,4.0
+Mexico,MEX,1996,4.0
+Mexico,MEX,1997,4.0
+Mexico,MEX,1998,4.0
+Mexico,MEX,1999,4.0
+Mexico,MEX,2000,4.0
+Mexico,MEX,2001,4.0
+Mexico,MEX,2002,4.0
+Mexico,MEX,2003,4.0
+Mexico,MEX,2004,4.0
+Mexico,MEX,2005,4.0
+Mexico,MEX,2006,4.0
+Mexico,MEX,2007,4.0
+Mexico,MEX,2008,4.0
+Mexico,MEX,2009,4.0
+Mexico,MEX,2010,4.0
+Mexico,MEX,2011,4.0
+Mexico,MEX,2012,4.0
+Mexico,MEX,2013,2.0625
+Mexico,MEX,2014,2.0625
+Mexico,MEX,2015,2.0625
+Mexico,MEX,2016,2.0625
+Mexico,MEX,2017,2.0625
+Mexico,MEX,2018,2.0625
+Mexico,MEX,2019,2.0625
+Mexico,MEX,2020,2.0625
+Mexico,MEX,2021,2.0625
+Mexico,MEX,2022,2.0625
+Mexico,MEX,2023,2.0625
+Mexico,MEX,2024,4.25
+Mexico,MEX,2025,4.25
+Spain,ESP,1985,3.75
+Spain,ESP,1986,3.75
+Spain,ESP,1987,3.75
+Spain,ESP,1988,3.75
+Spain,ESP,1989,3.75
+Spain,ESP,1990,3.75
+Spain,ESP,1991,3.75
+Spain,ESP,1992,3.75
+Spain,ESP,1993,3.75
+Spain,ESP,1994,3.75
+Spain,ESP,1995,3.25
+Spain,ESP,1996,3.25
+Spain,ESP,1997,3.25
+Spain,ESP,1998,3.25
+Spain,ESP,1999,3.25
+Spain,ESP,2000,3.25
+Spain,ESP,2001,3.25
+Spain,ESP,2002,3.25
+Spain,ESP,2003,3.25
+Spain,ESP,2004,3.25
+Spain,ESP,2005,3.25
+Spain,ESP,2006,3.25
+Spain,ESP,2007,3.0
+Spain,ESP,2008,3.0
+Spain,ESP,2009,3.0
+Spain,ESP,2010,3.0
+Spain,ESP,2011,2.5625
+Spain,ESP,2012,2.6875
+Spain,ESP,2013,2.5625
+Spain,ESP,2014,2.46875
+Spain,ESP,2015,2.46875
+Spain,ESP,2016,2.46875
+Spain,ESP,2017,2.46875
+Spain,ESP,2018,2.46875
+Spain,ESP,2019,2.46875
+Spain,ESP,2020,2.46875
+Spain,ESP,2021,2.46875
+Spain,ESP,2022,2.46875
+Spain,ESP,2023,3.46875
+Spain,ESP,2024,3.46875
+Spain,ESP,2025,3.46875
+Sweden,SWE,1985,4.08333
+Sweden,SWE,1986,4.08333
+Sweden,SWE,1987,4.08333
+Sweden,SWE,1988,4.08333
+Sweden,SWE,1989,4.08333
+Sweden,SWE,1990,4.08333
+Sweden,SWE,1991,4.08333
+Sweden,SWE,1992,2.77083
+Sweden,SWE,1993,2.77083
+Sweden,SWE,1994,1.77083
+Sweden,SWE,1995,1.77083
+Sweden,SWE,1996,1.77083
+Sweden,SWE,1997,1.4375
+Sweden,SWE,1998,1.4375
+Sweden,SWE,1999,1.4375
+Sweden,SWE,2000,1.4375
+Sweden,SWE,2001,1.4375
+Sweden,SWE,2002,1.4375
+Sweden,SWE,2003,1.4375
+Sweden,SWE,2004,1.4375
+Sweden,SWE,2005,1.4375
+Sweden,SWE,2006,1.4375
+Sweden,SWE,2007,1.4375
+Sweden,SWE,2008,0.8125
+Sweden,SWE,2009,0.8125
+Sweden,SWE,2010,0.8125
+Sweden,SWE,2011,0.8125
+Sweden,SWE,2012,0.8125
+Sweden,SWE,2013,0.8125
+Sweden,SWE,2014,0.8125
+Sweden,SWE,2015,0.8125
+Sweden,SWE,2016,0.8125
+Sweden,SWE,2017,0.8125
+Sweden,SWE,2018,0.8125
+Sweden,SWE,2019,0.8125
+Sweden,SWE,2020,0.8125
+Sweden,SWE,2021,0.8125
+Sweden,SWE,2022,0.8125
+Sweden,SWE,2023,0.9375
+Sweden,SWE,2024,0.9375
+Sweden,SWE,2025,0.9375
+United States,USA,1985,0.25
+United States,USA,1986,0.25
+United States,USA,1987,0.25
+United States,USA,1988,0.25
+United States,USA,1989,0.25
+United States,USA,1990,0.25
+United States,USA,1991,0.25
+United States,USA,1992,0.25
+United States,USA,1993,0.25
+United States,USA,1994,0.25
+United States,USA,1995,0.25
+United States,USA,1996,0.25
+United States,USA,1997,0.25
+United States,USA,1998,0.25
+United States,USA,1999,0.25
+United States,USA,2000,0.25
+United States,USA,2001,0.25
+United States,USA,2002,0.25
+United States,USA,2003,0.25
+United States,USA,2004,0.25
+United States,USA,2005,0.25
+United States,USA,2006,0.25
+United States,USA,2007,0.25
+United States,USA,2008,0.25
+United States,USA,2009,0.25
+United States,USA,2010,0.25
+United States,USA,2011,0.25
+United States,USA,2012,0.25
+United States,USA,2013,0.25
+United States,USA,2014,0.25
+United States,USA,2015,0.25
+United States,USA,2016,0.25
+United States,USA,2017,0.25
+United States,USA,2018,0.25
+United States,USA,2019,0.25
+United States,USA,2020,0.25
+United States,USA,2021,0.25
+United States,USA,2022,0.25
+United States,USA,2023,0.25
+United States,USA,2024,0.25
+United States,USA,2025,0.25
